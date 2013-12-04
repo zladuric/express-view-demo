@@ -1,21 +1,5 @@
-doctype 5
-html
-    head
-        title= title
-        link(href='//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css',rel='stylesheet')
-    body
-        #header
-            #nav.navbar.navbar-fixed-top
-                ul
-                    li
-                        a(href='#/home', title='Home') Home
-                    li.active
-                        a(href='#/profile', title='Profile'): img(src='profile.png')
-        #content(style='margin-top: 5em;')
-            h2= someVariable
-            p We have some text in a paragraph.
-                | We can pipe some more into this same paragraph.
-            | Or outside of it.
-            p.
-                Or add it on a line of its own (see the dot?) 
-        
+extends layout
+
+block content
+    h1= title
+    p We can have a shell, comon page layout, or more, and then use that for different sections of the site.
