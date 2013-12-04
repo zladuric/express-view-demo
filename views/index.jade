@@ -4,3 +4,11 @@ html
         title= title
     body
         h2 #{title}!
+        - var object = {description: 'Foo bar baz'}
+        #user
+            if object.description
+                h2 Description
+                p.desc= object.description
+            else
+                h2 Description
+                p.desc This object has no description.
