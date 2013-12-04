@@ -2,13 +2,20 @@ doctype 5
 html
     head
         title= title
+        link(href='//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css',rel='stylesheet')
     body
-        h2 #{title}!
-        - var object = {description: 'Foo bar baz'}
-        #user
-            if object.description
-                h2 Description
-                p.desc= object.description
-            else
-                h2 Description
-                p.desc This object has no description.
+        #header
+            #nav.navbar.navbar-fixed-top
+                ul
+                    li
+                        a(href='#/home', title='Home') Home
+                    li.active
+                        a(href='#/profile', title='Profile'): img(src='profile.png')
+        #content(style='margin-top: 5em;')
+            h2= someVariable
+            p We have some text in a paragraph.
+                | We can pipe some more into this same paragraph.
+            | Or outside of it.
+            p.
+                Or add it on a line of its own (see the dot?) 
+        
